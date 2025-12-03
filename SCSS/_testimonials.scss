@@ -1,0 +1,154 @@
+/************Testimonials Section CSS Code************/
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__heading {
+    max-width: 44.8rem;
+    margin-top: 5rem;
+  }
+  &__paragraph {
+    margin: 2rem 0 0;
+  }
+  &__cards {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    .cards-container {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+      justify-content: right;
+      position: relative;
+      left: 1rem;
+    }
+    .card {
+      cursor: pointer;
+      margin: 6rem 0;
+      border: 0.2rem solid #dddddd;
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      text-align: left;
+      width: 40rem;
+      height: 23rem;
+      transition: var(--transition-timing);
+      &:hover {
+        border: 0.2rem solid var(--color-fireburst-red);
+        transform: translateY(-2rem);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+      }
+      &:has(.card:hover) .card:not(:hover) {
+        border-color: #dddddd;
+        transform: translateY(0);
+        box-shadow: none;
+      }
+      &:first-child {
+        border-color: var(--color-fireburst-red);
+      }
+      &__heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+
+        .informations {
+          display: flex;
+          flex-direction: column;
+          margin-left: 2rem;
+          .name {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--color-midnight-blue);
+          }
+          .location {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--color-charcoal-blue);
+          }
+        }
+
+        .rating {
+          margin-left: auto;
+          font-size: 1.6rem;
+          color: var(--color-midnight-blue);
+          gap: 1rem;
+          display: flex;
+          align-items: center;
+          .fa {
+            color: #fea250;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      &__body {
+        width: 34rem;
+        height: 10rem;
+        &__paragraph {
+          color: var(--color-midnight-blue);
+        }
+      }
+    }
+  }
+  &:has(.card:hover) .card:not(:hover) {
+    border-color: #dddddd;
+  }
+  .slide {
+    width: var(--container-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    &__dots-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1.5rem);
+      column-gap: 1.5rem;
+      height: 1.5rem;
+      .dot {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.75rem;
+        background-color: #dde0e4;
+        &:first-child {
+          grid-column: 1/3;
+          background-color: var(--color-fireburst-red);
+        }
+      }
+    }
+    &__arrows {
+      gap: 2rem;
+      display: flex;
+      .arrow {
+        cursor: pointer;
+        width: 6rem;
+        height: 6rem;
+        border: 0.2rem solid var(--color-fireburst-red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 3rem;
+        transition: var(--transition-timing);
+        &:hover{
+          color: var(--background-color);
+          background-color: var(--color-fireburst-red);
+        }
+      }
+      &__left {
+        color: var(--color-fireburst-red);
+        transform: scaleX(-1);
+      }
+      &__right {
+        color: var(--background-color);
+        background-color: var(--color-fireburst-red);
+      }
+    }
+    &:has(.arrow:hover) .arrow:not(:hover) {
+      background-color: var(--background-color);
+      color: var(--color-fireburst-red);
+    }
+  }
+}

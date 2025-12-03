@@ -1,0 +1,121 @@
+/**************Pricing Section CSS Code***************/
+
+.pricing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+
+  &__paragraph {
+    text-align: center;
+    margin: 2rem 0 6rem;
+  }
+
+  &__plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    .plan {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8rem 6.9rem 5rem;
+      border: 0.2rem solid #dddddd;
+      background-color: var(--background-color);
+      border-radius: var(--border-radius);
+      height: 76rem;
+      width: 33rem;
+      transition: var(--transition-timing);
+      &:hover {
+        border: 0.2rem solid var(--color-fireburst-red);
+        transform: translateY(-2rem);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+        & .plan__select {
+          background-color: var(--color-fireburst-red);
+          color: var(--background-color);
+        }
+      }
+
+      &:last-child {
+        border: 0.2rem solid var(--color-fireburst-red);
+        .plan__select {
+          background-color: var(--color-fireburst-red);
+          color: var(--background-color);
+        }
+      }
+
+      &__image {
+        width: 14.5rem;
+        height: 16.5rem;
+      }
+
+      &__label {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 3rem 0;
+        color: var(--color-midnight-blue);
+      }
+
+      &__list li {
+        position: relative;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--color-charcoal-blue);
+        margin-left: 4.4rem;
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2rem;
+          height: 2rem;
+          left: -4.4rem;
+          background: url("../assets/correct-symbol.svg") no-repeat;
+          background-size: contain;
+          background-color: var(--background-color);
+          border-radius: 50%;
+        }
+      }
+
+      &__price {
+        margin: auto 0 2rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--color-charcoal-blue);
+        &__per {
+          color: var(--color-charcoal-blue);
+          font-weight: 400;
+        }
+      }
+
+      &__select {
+        padding: 1.3rem 6.3rem;
+        border: 0.2rem solid var(--color-fireburst-red);
+        color: var(--color-fireburst-red);
+        border-radius: 5rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition: var(--transition-timing);
+        &:hover {
+          background-color: var(--color-fireburst-red);
+          color: white;
+        }
+      }
+    }
+  }
+
+  &:has(.plan:hover) .plan:not(:hover) {
+    border-color: #dddddd;
+    & .plan__select {
+      border-color: var(--color-fireburst-red);
+      background-color: var(--background-color);
+      color: var(--color-fireburst-red);
+    }
+  }
+}

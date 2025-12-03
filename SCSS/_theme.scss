@@ -1,0 +1,21 @@
+html:has(.toggle-checkbox:checked) {
+  --color-midnight-blue: #bbbbbb;
+  --background-color: #000012;
+  --color-gray: #01010d;
+}
+
+html:has(.toggle-checkbox:checked) {
+  .logo path:nth-child(1){
+    fill: #bbbbbb;
+  }
+  .about__bottom::after , .subscribe::after , .burger-menu__bar{
+    filter: invert(100%);
+  }
+  .pricing__plans .plan:hover,
+  .testimonials__cards .card:hover {
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.25);
+  }
+  .social{
+    box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.05);
+  }
+}

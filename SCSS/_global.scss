@@ -1,0 +1,87 @@
+/******************Global CSS Codes*****************/
+
+.container {
+  width: var(--container-width);
+  padding: 0 0.8rem;
+  margin: 10rem auto;
+  min-height: 100vh;
+}
+
+.di-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex: 1;
+  column-gap: 4rem;
+}
+
+.h2-heading {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 5rem;
+  max-width: 38.3rem;
+  color: var(--color-midnight-blue);
+}
+
+.paragraph {
+  line-height: 3rem;
+  color: var(--color-charcoal-blue);
+  font-weight: 400;
+  max-width: 55.5rem;
+}
+
+.gradient-background {
+  position: relative;
+}
+
+.gradient-background::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-color);
+  z-index: -1;
+}
+
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 25rem;
+  height: 6rem;
+  border-radius: var(--border-radius);
+  z-index: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -2rem;
+    transform: translateX(-50%);
+    width: 32rem;
+    height: 16rem;
+    background: url(../assets/bluredRectangle.svg) no-repeat center;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+
+.shaded_btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-fireburst-red);
+  border-radius: var(--border-radius);
+  color: var(--background-color);
+  font-weight: 700;
+  transition: var(--transition-timing);
+  cursor: pointer;
+  z-index: 2;
+  &:hover {
+    background-color: var(--background-color);
+    border: 0.2rem solid var(--color-fireburst-red);
+    color: var(--color-fireburst-red);
+  }
+}

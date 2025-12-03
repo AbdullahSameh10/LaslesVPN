@@ -1,0 +1,43 @@
+/*****************Subscribe CSS Code******************/
+
+.subscribe {
+  margin-top: 6.5rem;
+  position: relative;
+  width: 114rem;
+  padding: 5.65rem 7rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  // box-shadow: 0 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../assets/bluredRectangle2.svg) no-repeat top;
+    background-size: cover;
+    width: 125%;
+    height: 200%;
+    left: 50%;
+    top: -15rem;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .heading-container {
+    height: 11.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__heading {
+    line-height: 4.5rem;
+    width: 37.2rem;
+    height: 8rem;
+  }
+  .paragraph {
+    height: 1.6rem;
+    display: flex;
+    align-items: start;
+  }
+}

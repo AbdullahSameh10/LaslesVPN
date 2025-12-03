@@ -1,0 +1,39 @@
+/**************Features Section CSS Code**************/
+
+.features {
+  gap: 17rem;
+  align-items: end;
+  margin: 9.6rem 0 13.1rem;
+  &__image {
+    width: 50.8rem;
+    height: 41.5rem;
+    margin-left: 3.5rem;
+  }
+  &__paragraph {
+    padding: 2rem 0;
+    width: 43rem;
+  }
+  &__list li {
+    position: relative;
+    height: 3rem;
+    align-content: center;
+    margin-left: 3.4rem;
+    font-size: 1.4rem;
+    color: var(--color-charcoal-blue);
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      left: -3.4rem;
+      background: url("../assets/correct-arrow.svg");
+      background-size: 100% 100%;
+      background-color: var(--background-color);
+      border-radius: 50%;
+    }
+  }
+}

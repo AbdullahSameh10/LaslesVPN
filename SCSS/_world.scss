@@ -1,0 +1,26 @@
+/*****World Section And Sponsored Image CSS Code******/
+
+.world {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 15rem;
+  &__paragraph {
+    margin: 2rem 0 15.6rem;
+    font-weight: 400;
+    &__bold {
+      font-weight: 500;
+    }
+  }
+  &__map {
+    margin-bottom: 3.6rem;
+    width: var(--container-width);
+  }
+}
+
+.sponsored {
+  display: flex;
+  justify-content: center;
+  width: var(--container-width);
+}
